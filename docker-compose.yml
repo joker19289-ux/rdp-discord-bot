@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  windows_server:
+    image: windows_server_2022_rdp:latest
+    container_name: winrdp
+    environment:
+      - VNC_USER=${NO_VNC_USER}
+      - VNC_PASSWORD=${NO_VNC_PASSWORD}
+    ports:
+      - "3389:3389"
+      - "5900:5900"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 8G
