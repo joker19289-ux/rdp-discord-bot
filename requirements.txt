@@ -1,0 +1,5 @@
+discord.py
+docker
+flask
+python-dotenv
+apscheduler
